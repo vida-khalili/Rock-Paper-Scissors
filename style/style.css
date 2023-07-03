@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #1e1e3d;
+  /* overflow-y: hidden; */
+}
+h1 {
+  font-size: 96px;
+  font-weight: 700;
+  font-family: "Passion One", cursive;
+}
+
+.homepage-parts {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: url("./../images/bg-01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.hero {
+  max-width: 320px;
+  justify-items: baseline;
+  display: grid;
+  gap: 24px;
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.title h1 {
+  display: grid;
+  gap: 4px;
+}
+.introduction-form {
+  display: grid;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.player-name-input {
+  padding: 8px 16px;
+  height: 40px;
+  width: 320px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+.btn {
+  max-width: 320px;
+  background-color: transparent;
+  border-radius: 16px;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  transition: background-color 200ms ease-in;
+}
+
+.btn-submit-name {
+  box-shadow: 0 0 2px black;
+  color: white;
+  background-color: #2b9d2b;
+}
+
+.btn-submit-name:hover {
+  background-color: rgb(1, 193, 1);
+}
+
+@media screen and (max-width: 1200px) {
+  .homepage-parts {
+    max-width: 900px;
+  }
+}
