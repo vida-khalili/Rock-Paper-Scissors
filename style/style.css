@@ -83,6 +83,9 @@ form {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 300px;
   background-color: transparent;
   border-radius: 16px;
@@ -153,15 +156,18 @@ form {
   max-width: 320px;
 }
 .game-player-name {
+  /* font-family: "Passion One", cursive; */
   color: white;
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 24px;
+  letter-spacing: 1px;
   font-weight: 700;
 }
 
 .game-score {
   color: white;
   font-size: 18px;
+  font-weight: 600;
 }
 .choice-box {
   display: flex;
@@ -186,16 +192,16 @@ form {
   gap: 24px;
 }
 .choice-btn {
-  padding: 8px 16px;
   height: 45px;
   width: 150px;
   color: white;
-  transition: font-size 150ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .choice-btn:disabled {
   cursor: default;
   background-color: gray;
+  pointer-events: none;
 }
 
 .choice-btn:hover {
@@ -213,6 +219,21 @@ form {
 
 .scissors-btn {
   background: #f07722;
+}
+
+.reload-btn {
+  margin-left: 24px;
+  width: 80px;
+  background-color: #2b9d2b;
+  transition: transform 500ms ease-in;
+}
+.reload {
+  width: 30px;
+  height: 40px;
+}
+
+.reload-btn:hover .reload {
+  transform: scale(1.1);
 }
 
 .winner-message {

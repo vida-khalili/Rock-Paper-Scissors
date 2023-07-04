@@ -118,6 +118,19 @@ const setScissors = () => {
   checkWinner();
 };
 
+const reloadGame = () => {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreBox.innerHTML = playerScore;
+  computerScoreBox.innerHTML = computerScore;
+  playerChoiceImage.src = "./images/choices.png";
+  computerChoiceImage.src = "./images/choices.png";
+  winnerMessage.innerHTML = "";
+  rockButton.disabled = false;
+  paperButton.disabled = false;
+  scissorsButton.disabled = false;
+};
+
 // form and input
 let nameForm = document.querySelector(".introduction-form");
 nameForm.addEventListener("submit", getPlayerName);
@@ -138,6 +151,9 @@ paperButton.addEventListener("click", setPaper);
 let scissorsButton = document.getElementById("scissors-btn");
 scissorsButton.addEventListener("click", setScissors);
 
+// reload button
+let reloadButton = document.getElementById("reload-btn");
+reloadButton.addEventListener("click", reloadGame);
 // back button
 let backButton = document.getElementById("back-btn");
 backButton.addEventListener("click", backToHome);
