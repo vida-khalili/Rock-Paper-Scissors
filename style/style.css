@@ -4,7 +4,8 @@ html {
 
 body {
   background-color: #1e1e3d;
-  /* overflow-y: hidden; */
+  font-family: "Quicksand", sans-serif;
+  overflow-y: hidden;
 }
 h1 {
   font-size: 96px;
@@ -44,9 +45,24 @@ h1 {
 
 .title h1 {
   display: grid;
-  gap: 4px;
+  gap: 8px;
+}
+
+.rock-title {
+  line-height: 50px;
+  font-size: 149px;
+}
+.paper-title {
+  line-height: 134px;
+  font-size: 122px;
+}
+
+.scissors-title {
+  line-height: 20px;
+  font-size: 91px;
 }
 .introduction-form {
+  margin-top: 24px;
   display: grid;
   justify-content: center;
 }
@@ -59,7 +75,7 @@ form {
 .player-name-input {
   padding: 8px 16px;
   height: 40px;
-  width: 320px;
+  width: 300px;
   font-size: 16px;
   border: none;
   outline: none;
@@ -67,7 +83,7 @@ form {
 }
 
 .btn {
-  max-width: 320px;
+  max-width: 300px;
   background-color: transparent;
   border-radius: 16px;
   font-size: 18px;
@@ -75,6 +91,7 @@ form {
   cursor: pointer;
   font-weight: 600;
   border: none;
+  box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 81%);
   transition: background-color 200ms ease-in;
 }
 
@@ -88,6 +105,123 @@ form {
   background-color: rgb(1, 193, 1);
 }
 
+.game-box {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1200px;
+  background: url("./../images/bg-gamepart-01.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 110px;
+  left: 95px;
+  width: 80px;
+  height: 10px;
+  box-shadow: none;
+  transition: transform 200ms ease-in;
+}
+.back-btn:hover {
+  transform: scale(1.3);
+}
+.back-btn svg {
+  width: 50px;
+  height: 20px;
+}
+.game-parts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.player-part,
+.computer-part {
+  padding: 40px;
+  display: grid;
+  gap: 16px;
+  max-width: 320px;
+}
+.game-player-name {
+  color: white;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.game-score {
+  color: white;
+  font-size: 18px;
+}
+.choice-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  width: 250px;
+  height: 250px;
+  border-radius: 16px;
+}
+
+.choice-box img {
+  width: 200px;
+  height: 200px;
+}
+
+.buttons-list {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.choice-btn {
+  padding: 8px 16px;
+  height: 45px;
+  width: 150px;
+  color: white;
+  transition: font-size 150ms ease-in;
+}
+
+.choice-btn:disabled {
+  cursor: default;
+  background-color: gray;
+}
+
+.choice-btn:hover {
+  color: #30305e;
+  font-size: 20px;
+}
+
+.rock-btn {
+  background: #35b5e9;
+}
+
+.paper-btn {
+  background: #c72100;
+}
+
+.scissors-btn {
+  background: #f07722;
+}
+
+.winner-message {
+  height: 50px;
+  font-family: "Passion One", cursive;
+  margin-top: 24px;
+  font-size: 46px;
+  color: yellow;
+}
 @media screen and (max-width: 1200px) {
   .homepage-parts {
     max-width: 900px;
