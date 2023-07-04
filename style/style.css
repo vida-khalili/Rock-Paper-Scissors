@@ -243,6 +243,9 @@ form {
 }
 
 .copyright {
+  position: fixed;
+  bottom: 80px;
+  left: 43%;
   color: white;
 }
 
