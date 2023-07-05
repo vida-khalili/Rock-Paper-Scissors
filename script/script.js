@@ -54,7 +54,7 @@ function backToHome() {
 
 const setComputerChoice = () => {
   let choices = ["rock", "paper", "scissors"];
-  computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  computerChoice = choices[Math.floor(Math.random() * 3)];
   computerChoiceImage.src = `./images/${computerChoice}.png`;
 };
 

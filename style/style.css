@@ -293,10 +293,11 @@ form {
 }
 
 .copyright {
+  width: 100%;
+  text-align: center;
   z-index: 20;
   position: fixed;
-  bottom: 70px;
-  left: 39%;
+  bottom: 50px;
   color: white;
   font-weight: 500;
 }
