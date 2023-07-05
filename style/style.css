@@ -20,12 +20,9 @@ h6 {
 }
 
 .homepage-parts {
+  position: relative;
   margin: 0 auto;
   max-width: 1200px;
-  background: url("./../images/bg-01.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100%;
   display: grid;
   align-items: center;
@@ -34,8 +31,15 @@ h6 {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+.homepage-bg {
+  z-index: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
 
 .hero {
+  z-index: 20;
   max-width: 320px;
   justify-items: baseline;
   display: grid;
@@ -123,17 +127,14 @@ form {
   margin: 0 auto;
   height: 100%;
   max-width: 1200px;
-  background: url("./../images/bg-gamepart-01.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 16px;
 }
 
 .back-btn {
+  z-index: 30;
   position: absolute;
-  top: 110px;
-  left: 95px;
+  top: 65px;
+  left: 85px;
   width: 80px;
   height: 10px;
   box-shadow: none;
@@ -147,6 +148,8 @@ form {
   height: 20px;
 }
 .game-parts {
+  z-index: 20;
+  max-width: 1000px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 0.3fr 1fr;
@@ -156,9 +159,9 @@ form {
 
 .player-part,
 .computer-part {
-  padding: 40px;
+  padding: 24px;
   display: grid;
-  gap: 16px;
+  gap: 12px;
   max-width: 320px;
 }
 .game-player-name {
@@ -224,6 +227,7 @@ form {
 }
 
 .buttons-list {
+  z-index: 10;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -275,11 +279,13 @@ form {
 }
 
 .winner-message {
+  z-index: 10;
   height: 50px;
   font-family: "Passion One", cursive;
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: 46px;
   color: yellow;
+  text-shadow: 1px 1px 4px green;
 }
 
 .winner-name {
@@ -287,8 +293,9 @@ form {
 }
 
 .copyright {
+  z-index: 20;
   position: fixed;
-  bottom: 80px;
+  bottom: 100px;
   left: 39%;
   color: white;
   font-weight: 500;
