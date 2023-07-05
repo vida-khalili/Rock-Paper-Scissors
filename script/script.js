@@ -25,6 +25,12 @@ let computerScoreBox = document.getElementById("computer-score");
 //winner message
 let winnerMessage = document.querySelector(".winner-message");
 
+//player choice box
+let playerChoiceBox = document.getElementById("player-choice-box");
+
+//computer choice box
+let computerChoiceBox = document.getElementById("computer-choice-box");
+
 function getPlayerName(event) {
   event.preventDefault();
   playerName = playerNameInput.value;
@@ -57,32 +63,51 @@ const setScore = () => {
     if (playerChoice === "rock" && computerChoice === "paper") {
       computerScore += 1;
       computerScoreBox.innerHTML = computerScore;
+      computerChoiceBox.style.borderColor = "green";
+      playerChoiceBox.style.borderColor = "white";
     } else if (playerChoice === "rock" && computerChoice === "scissors") {
       playerScore += 1;
       playerScoreBox.innerHTML = playerScore;
+      computerChoiceBox.style.borderColor = "white";
+      playerChoiceBox.style.borderColor = "green";
     } else if (playerChoice === "paper" && computerChoice === "scissors") {
       computerScore += 1;
       computerScoreBox.innerHTML = computerScore;
+      computerChoiceBox.style.borderColor = "green";
+      playerChoiceBox.style.borderColor = "white";
     } else if (playerChoice === "paper" && computerChoice === "rock") {
       playerScore += 1;
       playerScoreBox.innerHTML = playerScore;
+      computerChoiceBox.style.borderColor = "white";
+      playerChoiceBox.style.borderColor = "green";
     } else if (playerChoice === "scissors" && computerChoice === "rock") {
       computerScore += 1;
       computerScoreBox.innerHTML = computerScore;
+      computerChoiceBox.style.borderColor = "green";
+      playerChoiceBox.style.borderColor = "white";
     } else if (playerChoice === "scissors" && computerChoice === "paper") {
       playerScore += 1;
       playerScoreBox.innerHTML = playerScore;
+      computerChoiceBox.style.borderColor = "white";
+      playerChoiceBox.style.borderColor = "green";
+    } else if (playerChoice === computerChoice) {
+      computerChoiceBox.style.borderColor = "yellow";
+      playerChoiceBox.style.borderColor = "yellow";
     }
   }
 };
 const checkWinner = () => {
   if (playerScore === 5 && computerScore < 5) {
-    winnerMessage.innerHTML = `${playerName} is the winner!`;
+    winnerMessage.innerHTML = `<span class="winner-name">${playerName}</span> is the winner!`;
+    computerChoiceBox.style.borderColor = "red";
+    playerChoiceBox.style.borderColor = "green";
     rockButton.disabled = true;
     paperButton.disabled = true;
     scissorsButton.disabled = true;
   } else if (computerScore === 5 && playerScore < 5) {
-    winnerMessage.innerHTML = "computer is the winner!";
+    winnerMessage.innerHTML = "Computer is the winner!";
+    computerChoiceBox.style.borderColor = "green";
+    playerChoiceBox.style.borderColor = "red";
     rockButton.disabled = true;
     paperButton.disabled = true;
     scissorsButton.disabled = true;
@@ -129,6 +154,8 @@ const reloadGame = () => {
   rockButton.disabled = false;
   paperButton.disabled = false;
   scissorsButton.disabled = false;
+  computerChoiceBox.style.borderColor = "white";
+  playerChoiceBox.style.borderColor = "white";
 };
 
 // form and input

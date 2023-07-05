@@ -68,7 +68,7 @@
       <div class="game-parts">
         <div class="player-part">
           <div class="game-player-name">Player</div>
-          <div class="choice-box">
+          <div class="choice-box" id="player-choice-box">
             <img
               src="./images/choices.png"
               alt="player choice image"
@@ -77,9 +77,25 @@
           </div>
           <div class="game-score">Score : <span id="player-score">0</span></div>
         </div>
+        <div class="legend">
+          <h6>Legend</h6>
+          <div class="legend-item legend-win">
+            <div class="legend-box win-box"></div>
+            Won this Hand
+          </div>
+          <div class="legend-item legend-draw">
+            <div class="legend-box draw-box"></div>
+            It's a Draw
+          </div>
+          <div class="legend-item legend-lost">
+            <div class="legend-box lost-box"></div>
+            Lost the Game <br />
+            (Game Over)
+          </div>
+        </div>
         <div class="computer-part">
           <div class="game-player-name">computer</div>
-          <div class="choice-box">
+          <div class="choice-box" id="computer-choice-box">
             <img
               src="./images/choices.png"
               alt="computer choice image"
@@ -131,6 +147,10 @@
     <div class="copyright">
       coded by
       <a href="https://github.com/vida-khalili" target="_blank">Vida Khalili</a>
+      and hosted on
+      <a href="https://rockpaperscissors-js-games.netlify.app/" target="_blank"
+        >Netlify</a
+      >
     </div>
     <script src="./script/script.js"></script>
   </body>
