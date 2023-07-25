@@ -1,11 +1,12 @@
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   background-color: #1e1e3d;
   font-family: "Quicksand", sans-serif;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 h1 {
@@ -311,4 +312,165 @@ a {
 }
 a:hover {
   border-bottom: none;
+}
+
+.mobile-bg {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .homepage-parts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .homepage-bg {
+    display: none;
+  }
+
+  .mobile-bg {
+    display: flex;
+    position: absolute;
+    width: 500px;
+  }
+
+  .hero {
+    justify-items: center;
+  }
+  .rock-title {
+    line-height: 50px;
+    font-size: 97px;
+  }
+  .paper-title {
+    line-height: 60px;
+    font-size: 80px;
+  }
+
+  .scissors-title {
+    line-height: 29px;
+    font-size: 59px;
+  }
+  .introduction-form {
+    margin-top: 8px;
+  }
+
+  .game-parts {
+    max-width: 400px;
+  }
+  .player-part {
+    padding: 16px;
+    max-width: 200px;
+  }
+  .game-parts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .game-player-name {
+    font-size: 18px;
+  }
+  .choice-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .choice-box img {
+    width: 120px;
+    height: 120px;
+  }
+  .legend {
+    display: none;
+  }
+
+  .buttons-list {
+    width: 360px;
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fill, 100px); */
+  }
+  .choice-btn {
+    width: 100px;
+  }
+  .reload-btn {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow-y: hidden;
+    background: linear-gradient(
+      90deg,
+      rgba(86, 22, 75, 1) 0%,
+      rgba(51, 22, 48, 1) 45%,
+      rgba(88, 43, 48, 1) 100%
+    );
+  }
+
+  .mobile-bg {
+    max-width: 400px;
+    /* height: 500; */
+  }
+
+  .homepage-parts,
+  .game-box {
+    margin-top: 80px;
+    height: 500px;
+  }
+  .hero {
+    justify-items: center;
+  }
+  .rock-title {
+    line-height: 25px;
+    font-size: 82px;
+  }
+  .paper-title {
+    line-height: 60px;
+    font-size: 67px;
+  }
+
+  .scissors-title {
+    line-height: 15px;
+    font-size: 50px;
+  }
+  .introduction-form {
+    margin-top: 12px;
+  }
+
+  .player-name-input,
+  .btn-submit-name {
+    width: 280px;
+  }
+
+  .game-parts {
+    max-width: 320px;
+  }
+  .player-part {
+    padding: 8px;
+    max-width: 150px;
+  }
+
+  .back-btn {
+    left: 20px;
+    top: 0;
+  }
+
+  .buttons-list {
+    width: 340px;
+    gap: 12px;
+  }
+  .choice-btn {
+    width: 100px;
+  }
+  .winner-message {
+    width: 100%;
+    text-align: center;
+    font-size: 34px;
+  }
+  .copyright {
+    font-size: 14px;
+    position: absolute;
+    top: 600px;
+  }
 }
